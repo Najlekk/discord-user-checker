@@ -15,6 +15,8 @@ Then type in folder with this app
 npm i
 ```
 
+And change "settings.json.example" to "settings.json" and insert bot token after word "BOT"
+
 ## Libraries
 
 - axios

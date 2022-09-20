@@ -1,6 +1,6 @@
 var express = require('express');
 const axios = require("axios");
-const settings = require("../settings.json.example");
+const settings = require("../settings.json");
 var router = express.Router();
 
 router.get('/:userId', function(req, res, next) {
