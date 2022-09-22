@@ -1,6 +1,6 @@
 # discord-user-checker
 
-discord-user-checker is web app to check user's informations
+discord-user-checker is web app to check user's information
 
 ## Installation
 
@@ -21,6 +21,11 @@ And change "settings.json.example" to "settings.json" and insert bot token after
 
 - axios
 - express (and dependencies)
+
+## Screenshots
+
+![First image](./images/discord_user_checker_1.png)
+![Second image](./images/discord_user_checker_2.png)
 
 ## Usage
 
