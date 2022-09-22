@@ -1,7 +1,7 @@
-var express = require('express');
+const express = require('express');
 const axios = require("axios");
 const settings = require("../settings.json");
-var router = express.Router();
+const router = express.Router();
 
 router.get('/:userId', function(req, res, next) {
   res.setHeader('content-type', 'application/json');

@@ -17,6 +17,8 @@ npm i
 
 And change "settings.json.example" to "settings.json" and insert bot token after word "BOT"
 
+Default port - 3000 (you can change it in settings file)
+
 ## Libraries
 
 - axios

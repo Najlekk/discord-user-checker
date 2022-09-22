@@ -1,3 +1,5 @@
 {
-  "auth": "Bot <YOUR TOKEN>"
+  "auth": "Bot <YOUR TOKEN>",
+  "port": "3000",
+  "app_name": "discord-user-checker"
 }
