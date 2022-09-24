@@ -7,7 +7,7 @@ const moment = require('moment');
 router.get('/:userId', function(req, res, next) {
   res.setHeader('content-type', 'application/json');
   const resp_data = {}
-  console.log(req.params.userId.toString().length);
+  //console.log(req.params.userId.toString().length);
   if(req.params.userId.toString().length < 17){
     resp_data['error'] = "Invalid id";
     res.send(resp_data)

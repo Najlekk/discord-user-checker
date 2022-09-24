@@ -31,9 +31,9 @@ async function get_discord_api_user_info(id) {
     const response = await fetch(url, {
         method: 'GET'
     });
-    const json = response.json();
+    const json = await response.json();
     if(Object.entries(json).length === 1 || Object.entries(json).length === 0){
         return null;
     }
-    return json;
+    return await json;
 }
