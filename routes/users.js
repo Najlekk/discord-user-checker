@@ -7,11 +7,22 @@ const moment = require('moment');
 router.get('/:userId', function(req, res, next) {
   res.setHeader('content-type', 'application/json');
   const resp_data = {}
+  console.log(req.params.userId.toString().length);
+  if(req.params.userId.toString().length < 17){
+    resp_data['error'] = "Invalid id";
+    res.send(resp_data)
+    return;
+  }
   axios.get('https://discord.com/api/users/' + req.params.userId, {
     headers: {
       'Authorization': settings.auth
     }
   }).then(response => {
+    if(response.status !== 200){
+      resp_data['error'] = "Invalid id";
+      res.send(resp_data)
+      return;
+    }
     for(const key in response.data){
       resp_data[key] = response.data[key];
     }

@@ -1,6 +1,9 @@
 async function get_user_info() {
     const id = document.getElementById('discord_id').value;
     const user = get_discord_api_user_info(id);
+    if(user == null){
+        return;
+    }
     user.then(data => {
         document.getElementById('info').style.display = "";
         document.getElementById('date-info').style.display = "";
@@ -28,5 +31,9 @@ async function get_discord_api_user_info(id) {
     const response = await fetch(url, {
         method: 'GET'
     });
-    return await response.json();
+    const json = response.json();
+    if(Object.entries(json).length === 1 || Object.entries(json).length === 0){
+        return null;
+    }
+    return json;
 }

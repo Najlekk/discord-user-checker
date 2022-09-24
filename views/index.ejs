@@ -14,7 +14,7 @@
     <div class="container">
       <div class="row">
         <label for="discord_id">Discord ID</label>
-        <input type="text" maxlength="22" class="form-control" id="discord_id" placeholder="Enter discord id">
+        <input type="text" minlength="17" maxlength="22" class="form-control" id="discord_id" placeholder="Enter discord id">
       </div>
       <button type="submit" onclick="get_user_info();" class="btn btn-primary">Submit</button>
       <div class="row" style="justify-content: center; margin-top: 4rem; display: none" id="info">
