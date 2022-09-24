@@ -6,7 +6,7 @@ discord-user-checker is web app to check user's information
 
 Clone repository.
 
-Download [Git for Windows](https://gitforwindows.org)
+Download Git
 
 [Node.js](https://nodejs.org/en/download/)
 
@@ -19,23 +19,23 @@ And change "settings.json.example" to "settings.json" and insert bot token after
 
 Default port - 3000 (you can change it in settings file)
 
-## Libraries
-
-- axios
-- express (and dependencies)
-
-## Screenshots
-
-![First image](./images/discord_user_checker_1.png)
-![Second image](./images/discord_user_checker_2.png)
-
 ## Usage
 
 ```
 node ./bin/www
 ```
-
 After starting the app, follow the instructions displayed in the terminal
+
+## Libraries
+
+- axios
+- express (and dependencies)
+- moment
+
+## Screenshots
+
+![First image](./images/discord_user_checker_1.png)
+![Second image](./images/discord_user_checker_2.png)
 
 ## Information
 

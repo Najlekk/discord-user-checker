@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" >
   </head>
   <body class="bg-dark text-white">
+    <noscript>
+      <strong>Sorry, but discord-user-checker will only work with enabled JavaScript!</strong>
+    </noscript>
     <div class="container">
       <div class="row">
         <label for="discord_id">Discord ID</label>
@@ -22,10 +25,12 @@
           <img src="" id="banner">
           <p><i class="person"></i><strong>User ID: </strong><span class="result"></span></p>
           <p><i class="hash"></i><strong>Username: </strong><span class="result"></span></p>
+          <p><i class="hash"></i><strong>Created*: </strong><span class="result"></span></p>
           <p><i class="palette"></i><strong>Banner Color: </strong><span class="result"></span></p>
         </div>
       </div>
     </div>
+    <p id="date-info" style="display: none">* Date is displayed in MM-DD-YYYY format</p>
     <footer class="footer">
       <!-- Copyright -->
       <div class="container text-center p-3">
