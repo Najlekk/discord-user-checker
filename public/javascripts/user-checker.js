@@ -1,11 +1,13 @@
 async function get_user_info() {
     const id = document.getElementById('discord_id').value;
-    const information_div = document.getElementById('info');
     const user = get_discord_api_user_info(id);
     user.then(data => {
-        information_div.appendChild(document.createElement("h1")).textContent = "Name with discriminator " + data['username'] + "#" + data['discriminator'];
-        information_div.appendChild(document.createElement("h1")).textContent = "ID: " + data['id'];
-        information_div.appendChild(document.createElement("h1")).textContent = "Banner color: " + data['banner_color'];
+        document.getElementById('info').style.display = "";
+        document.getElementById('avatar').setAttribute('src', data['avatar_url']);
+        document.getElementById('banner').setAttribute('src', data['banner_url'] + "?size=1024");
+        document.getElementsByClassName('result')[0].textContent = data['id'];
+        document.getElementsByClassName('result')[1].textContent = data['username'] + "#" + data['discriminator'];
+        document.getElementsByClassName('result')[2].appendChild(document.createElement("span")).textContent = data['banner_color'];
     })
 }
 

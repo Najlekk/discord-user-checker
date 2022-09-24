@@ -5,18 +5,35 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" >
   </head>
   <body class="bg-dark text-white">
-    <h1>Welcome to Discord User Checker!</h1>
-    <h2>Tool created by: Najlekk!</h2>
-    <div class="form-group">
-      <label for="discord_id">Discord ID</label>
-      <input type="text" class="form-control" id="discord_id" placeholder="Enter discord id">
+    <div class="container">
+      <div class="row">
+        <label for="discord_id">Discord ID</label>
+        <input type="text" maxlength="22" class="form-control" id="discord_id" placeholder="Enter discord id">
+      </div>
+      <button type="submit" onclick="get_user_info();" class="btn btn-primary">Submit</button>
+      <div class="row" style="justify-content: center; margin-top: 4rem; display: none" id="info">
+        <div class="col-md-2" style="text-align: center">
+          <img src="" id="avatar">
+        </div>
+        <div class="col-md-4">
+          <img src="" id="banner">
+          <p><i class="person"></i><strong>User ID: </strong><span class="result"></span></p>
+          <p><i class="hash"></i><strong>Username: </strong><span class="result"></span></p>
+          <p><i class="palette"></i><strong>Banner Color: </strong><span class="result"></span></p>
+        </div>
+      </div>
     </div>
-    <button type="submit" onclick="get_user_info();" class="btn btn-primary">Submit</button>
-    <div class="container-fluid" id="info">
-
-    </div>
+    <footer class="footer">
+      <!-- Copyright -->
+      <div class="container text-center p-3">
+        © 2022 Copyright:
+        <a class="" href="https://najlek.pl/">Najlekk</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
   </body>
   <script src="javascripts/user-checker.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
