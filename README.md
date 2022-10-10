@@ -34,8 +34,9 @@ After starting the app, follow the instructions displayed in the terminal
 
 ## Screenshots
 
-![First image](./images/discord_user_checker_1.png)
-![Second image](./images/discord_user_checker_2.png)
+![First Image](./images/discord_user_checker_1.png)
+![Second Image](./images/discord_user_checker_2.png)
+![Third Image](./images/discord_user_checker_3.png)
 
 ## Information
 

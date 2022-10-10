@@ -11,15 +11,21 @@ async function get_user_info() {
         document.getElementById('date-info').style.display = "";
         if(data['avatar_url'] == null){
             document.getElementById('avatar').style.display = "none";
+            document.getElementById('avatar_a').style.display = "none";
         } else {
             document.getElementById('avatar').style.display = "";
+            document.getElementById('avatar_a').style.display = "";
             document.getElementById('avatar').setAttribute('src', data['avatar_url']);
+            document.getElementById('avatar_a').setAttribute('href', data['avatar_url']);
         }
         if(data['banner_url'] == null){
             document.getElementById('banner').style.display = "none";
+            document.getElementById('banner_a').style.display = "none";
         } else {
             document.getElementById('banner').style.display = "";
+            document.getElementById('banner_a').style.display = "";
             document.getElementById('banner').setAttribute('src', data['banner_url'] + "?size=1024");
+            document.getElementById('banner_a').setAttribute('href', data['banner_url'] + "?size=1024");
         }
         document.getElementsByClassName('result')[0].textContent = data['id'];
         document.getElementsByClassName('result')[1].textContent = data['username'] + "#" + data['discriminator'];
