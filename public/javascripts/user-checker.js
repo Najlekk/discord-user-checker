@@ -9,29 +9,21 @@ async function get_user_info() {
     user.then(data => {
         document.getElementById('info').style.display = "";
         document.getElementById('date-info').style.display = "";
-        if(data['avatar_url'] == null){
-            document.getElementById('avatar').style.display = "none";
-            document.getElementById('avatar_a').style.display = "none";
-        } else {
-            document.getElementById('avatar').style.display = "";
-            document.getElementById('avatar_a').style.display = "";
-            document.getElementById('avatar').setAttribute('src', data['avatar_url']);
-            document.getElementById('avatar_a').setAttribute('href', data['avatar_url']);
-        }
-        if(data['banner_url'] == null){
-            document.getElementById('banner').style.display = "none";
-            document.getElementById('banner_a').style.display = "none";
-        } else {
-            document.getElementById('banner').style.display = "";
-            document.getElementById('banner_a').style.display = "";
-            document.getElementById('banner').setAttribute('src', data['banner_url'] + "?size=1024");
-            document.getElementById('banner_a').setAttribute('href', data['banner_url'] + "?size=1024");
-        }
+        const banner = document.getElementById('banner');
+        const banner_link = document.getElementById('banner_a');
+        const avatar = document.getElementById('avatar');
+        const avatar_link = document.getElementById('avatar_a');
+        banner.style.display = (data['banner_url'] == null ? "none" : "");
+        banner_link.style.display = (data['banner_url'] == null ? "none" : "");
+        banner.src = (data['banner_url'] == null ? "none" : data['banner_url'] + "?size=1024");
+        avatar.style.display = (data['avatar_url'] == null ? "none" : "");
+        avatar_link.style.display = (data['avatar_url'] == null ? "none" : "")
+        avatar.src = (data['avatar_url'] == null ? "none" : data['avatar_url']);
+        avatar_link.setAttribute("href", (data['avatar_url'] == null ? "" : data['avatar_url']));
+        banner_link.setAttribute('href', (data['banner_url'] == null ? "" : data['banner_url'] + "?size=1024"));
         document.getElementsByClassName('result')[0].textContent = data['id'];
         document.getElementsByClassName('result')[1].textContent = data['username'] + "#" + data['discriminator'];
-        if(data['bot'] != null && data['bot'] === true){
-            document.getElementsByClassName('result')[1].appendChild(document.createElement("img")).setAttribute("src", "../images/bot_flag.png");
-        }
+        if(data['bot'] != null && data['bot'] === true) document.getElementsByClassName('result')[1].appendChild(document.createElement("img")).setAttribute("src", "../images/bot_flag.png");
         document.getElementsByClassName('result')[2].textContent = data['formatted_timestamp'] + " UTC";
         document.getElementsByClassName('result')[3].appendChild(document.createElement("span")).textContent = data['banner_color'];
     })

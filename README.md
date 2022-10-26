@@ -1,6 +1,6 @@
-# discord-user-checker
+# discord-user-checker (FINAL UPDATE)
 
-discord-user-checker is web app to check user's information
+discord-user-checker is web app to check user's information. The project will no longer continue.
 
 ## Installation
 
